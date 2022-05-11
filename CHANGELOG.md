@@ -6,8 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2022-05-11
+
 ### Added
 
 First release
 
-## [0.0.1]
+[unreleased]: https://github.com/scinos/eleventy-plugin-react-ssr/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/scinos/eleventy-plugin-react-ssr/releases/tag/1.0.0
