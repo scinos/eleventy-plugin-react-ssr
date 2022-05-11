@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-react-ssr",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Pluginto write your Eleventy content using JSX as a template language",
   "keywords": [
     "11ty",
@@ -17,12 +17,15 @@
     "type": "git",
     "url": "git@github.com:scinos/eleventy-plugin-react-ssr.git"
   },
+  "main": "src/index.js",
   "exports": {
     ".": "./src/index.js",
     "./context": "./src/context.js"
   },
   "packageManager": "yarn@3.2.0",
-  "main": "src/index.js",
+  "scripts": {
+    "release": "release-it"
+  },
   "dependencies": {
     "@babel/core": "^7.17.10",
     "@babel/register": "^7.17.7"
