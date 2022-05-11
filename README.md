@@ -24,7 +24,24 @@ module.exports = function (eleventyConfig) {
 };
 ```
 
-### Writing pages
+### Plugin configuration
+
+This plugin uses Babel to transpile JSX files. It is possible to pass any Bable config as plugin configuration using the
+property `babelConfig`. For example, you can provide your own Babel plugins:
+
+```js
+const eleventyReactSSRPlugin = require('eleventy-plugin-react-ssr');
+
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyReactSSRPlugin, {
+        babelConfig: {
+            plugins: [['inline-react-svg', { svgo: false }]],
+        },
+    });
+};
+```
+
+## Writing pages
 
 Just use the extension `.jsx` for your page, and write it using JSX.
 
@@ -65,7 +82,7 @@ export default MyPage;
 You may want to use the data provided by Eleventy in your page. This can be done using React Context and a hook:
 
 ```jsx
-import { EleventyContext } from 'eleventy-plugin-react-ssr/eleventy-context';
+import EleventyContext from 'eleventy-plugin-react-ssr/context';
 import { useContext } from 'react';
 
 function MyPage() {
@@ -108,7 +125,7 @@ My page is aweseome
 
 ```jsx
 // _includes/layout/main.jsx
-import { EleventyContext } from 'eleventy-plugin-react-ssr/eleventy-context';
+import EleventyContext from 'eleventy-plugin-react-ssr/context';
 import { useContext } from 'react';
 
 function MainLayout() {
