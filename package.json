@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-react-ssr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pluginto write your Eleventy content using JSX as a template language",
   "keywords": [
     "11ty",
