@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixes
+
+Exclude processing `node_modules` (other than `node_modules/eleventy-plugin-react-ssr`). This was preventing 11ty to run `build --serve`
+
 ## [1.0.0] - 2022-05-11
 
 ### Added

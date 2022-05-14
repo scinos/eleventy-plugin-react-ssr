@@ -29,6 +29,7 @@ const template = (config = {}) => {
           ...(babelConfig.presets ?? []),
         ],
         only: [__dirname, process.cwd()],
+        ignore: [/node_modules\/(?!eleventy-plugin-react-ssr)/],
         plugins: babelConfig.plugins ?? [],
       });
     },
