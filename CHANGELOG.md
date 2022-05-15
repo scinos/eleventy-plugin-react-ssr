@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixes
+
+* Initialize the plugin only once
+* Clear require cache on initialization so React components can be recompiled.
+
 ## [1.0.1] - 2022-05-14
 
 ### Fixes

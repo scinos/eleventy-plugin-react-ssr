@@ -5,8 +5,11 @@ const template = (config = {}) => {
   const { babelConfig = {} } = config;
 
   return {
-    init() {
+    // This function must return a truty value. We could either return something, or make it async (so it returns
+    // a Promise)
+    init: async () => {
       requirePath = path.resolve(".");
+
       // eslint-disable-next-line global-require
       require("@babel/register")({
         ...babelConfig,
@@ -31,6 +34,11 @@ const template = (config = {}) => {
         only: [__dirname, process.cwd()],
         ignore: [/node_modules\/(?!eleventy-plugin-react-ssr)/],
         plugins: babelConfig.plugins ?? [],
+      });
+
+      // Clear require cache. Otherwise it won't recompile our React components.
+      Object.keys(require.cache).forEach(function (key) {
+        delete require.cache[key];
       });
     },
     getData: true,
