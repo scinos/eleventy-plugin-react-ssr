@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2022-05-15
+
 ### Fixes
 
 * Initialize the plugin only once
@@ -23,6 +25,7 @@ Exclude processing `node_modules` (other than `node_modules/eleventy-plugin-reac
 
 First release
 
-[unreleased]: https://github.com/scinos/eleventy-plugin-react-ssr/compare/1.0.1...HEAD
+[unreleased]: https://github.com/scinos/eleventy-plugin-react-ssr/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/scinos/eleventy-plugin-react-ssr/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/scinos/eleventy-plugin-react-ssr/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/scinos/eleventy-plugin-react-ssr/releases/tag/1.0.0
