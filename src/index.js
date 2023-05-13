@@ -35,11 +35,6 @@ const template = (config = {}) => {
         ignore: [/node_modules\/(?!eleventy-plugin-react-ssr)/],
         plugins: babelConfig.plugins ?? [],
       });
-
-      // Clear require cache. Otherwise it won't recompile our React components.
-      Object.keys(require.cache).forEach(function (key) {
-        delete require.cache[key];
-      });
     },
     getData: true,
     getInstanceFromInputPath(inputPath) {

@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixes
+
+* Do not kill require cache on initialization, breaks Eleventy 2.0.1
+
 ## [1.0.2] - 2022-05-15
 
 ### Fixes
