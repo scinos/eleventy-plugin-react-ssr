@@ -5,7 +5,7 @@ export default function renderTemplate(templatePath, props) {
   // eslint-disable-next-line import/no-dynamic-require, global-require
   const TemplateComponent = require(templatePath).default;
 
-  return `<!DOCTYPE html>${ReactDOMServer.renderToStaticMarkup(
+  return `${ReactDOMServer.renderToStaticMarkup(
     <EleventyContext.Provider value={props}>
       <TemplateComponent />
     </EleventyContext.Provider>
